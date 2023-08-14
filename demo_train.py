@@ -28,7 +28,7 @@ elif platform.system().lower() == 'linux' and 'ipykernel' in sys.argv[0]:
     yesterday = datetime.date.today() - datetime.timedelta(days=1)
     yesterday = yesterday.strftime('%Y%m%d')
     parser.add_argument('--dt', type=str, default='{}'.format(yesterday), required=False, help='today')
-    parser.add_argument('--model_id', type=str, default='mt_chatroom_esmm_v1', required=False)
+    parser.add_argument('--model_id', type=str, default='chatroom_esmm_v1', required=False)
     parser.add_argument('--base_path', type=str, default='/data/rcmd_data/user/ljy/mt/home_page/chatroom/v1/',
                         required=False)
     parser.add_argument('--idp_id', type=int, default=13317, required=False)
@@ -40,7 +40,7 @@ else:
     # idp 环境
     parser.add_argument('--dt', type=str, required=True, help='today')
     parser.add_argument('--model_id', type=str, required=True)
-    parser.add_argument('--base_path', type=str, default='/data/rcmd_data/user/ljy/mt/home_page/chatroom/v1',
+    parser.add_argument('--base_path', type=str, default='/data/rcmd_data/user/ljy/chatroom/v1',
                         required=False)
     parser.add_argument('--idp_id', type=int, required=True)
     parser.add_argument('--train_dt_duration', type=int, default=14, required=False)
