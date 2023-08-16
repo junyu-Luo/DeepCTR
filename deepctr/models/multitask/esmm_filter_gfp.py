@@ -11,7 +11,7 @@ from tensorflow.python.keras.layers import Dense, Multiply
 from ...layers.interaction import FM
 from ...layers.core import PredictionLayer, DNN
 from ...feature_column import SparseFeat, DenseFeat, VarLenSparseFeat
-from ...layers.featconv import ArithmeticLayer, VocabLayer, AutoDis
+from ...layers.convlayer import ArithmeticLayer, VocabLayer, AutoDis
 
 
 # # Util function

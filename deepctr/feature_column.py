@@ -205,7 +205,7 @@ def get_feature_names(feature_columns):
 
 
 def build_input_features(feature_columns, prefix=''):
-    from .layers.featconv import VocabLayer, StrSeqPadLayer, IntSeqPadLayer, ArithmeticLayer, AutoDis
+    from .layers.convlayer import VocabLayer, StrSeqPadLayer, IntSeqPadLayer, ArithmeticLayer, AutoDis
     """
     为所有的特征列构造keras tensor，生成输入的映射map，结果以OrderDict形式返回
 
@@ -251,7 +251,7 @@ def build_input_features(feature_columns, prefix=''):
                 input_features[fc.length_name] = Input((1,), name=prefix + fc.length_name, dtype='int32')
 
         elif isinstance(fc, EmbFeat):
-            from .layers.featconv import Str2VecLayer
+            from .layers.convlayer import Str2VecLayer
             input_features[fc.name] = Input(shape=(1,), name=prefix + fc.name, dtype=fc.dtype)
             process_features[fc.name] = Str2VecLayer(embedding_dim=fc.embed_size, name=f'Str2Vec_{fc.name}')(
                 input_features[fc.name])

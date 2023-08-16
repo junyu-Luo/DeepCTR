@@ -54,7 +54,7 @@ parser.add_argument('--batch_size', type=int, default=1024, required=False)
 parser.add_argument('--learning_rate', type=float, default=0.002, required=False)
 
 parser.add_argument('--if_train', type=int, default=1, required=False)
-parser.add_argument('--if_save', type=int, default=1, required=False)
+parser.add_argument('--if_save', type=int, default=0, required=False)
 parser.add_argument('--if_test', type=int, default=1, required=False)
 
 parser.add_argument('--verbose', type=int, default=1, required=False, help='0为不在标准输出流输出日志信息，1为输出进度条记录，2为每个epoch输出一行记录')
@@ -85,8 +85,9 @@ args.choose_feat = ['u_algo_mt_app_id', 'e_algo_mt_tag_id_exp', 'e_algo_mt_room_
                     'u_algo_mt_list_tag_gangup_cnt_3w', 'u_algo_mt_list_tag_duration_3w',
                     'u_algo_mt_list_tag_mic_cnt_3w', 'u_algo_mt_list_tag_exp_room_cnt_3w',
                     'u_algo_mt_list_tag_enter_room_cnt_3w', 'u_algo_mt_list_tag_gangup_room_cnt_3w',
-                    'u_algo_mt_list_tag_mic_room_cnt_3w', 'u_algo_mt_province', 'o_algo_mt_province', 'u_algo_mt_city',
-                    'o_algo_mt_city']
+                    'u_algo_mt_list_tag_mic_room_cnt_3w']
+                    # , 'u_algo_mt_province', 'o_algo_mt_province', 'u_algo_mt_city', 'o_algo_mt_city'
+
 
 updated_js = os.path.join(args.base_path, 'update_featjs',
                           'feature_{}_{}.json'.format(get_date(-14, args.dt), get_date(-1, args.dt)))
@@ -106,7 +107,7 @@ args.save_model_path = os.path.join(args.base_path, 'saved_model', args.dt)
 model = ESMM(fc.features, task_names=args.choose_label, task_types=['binary'] * len(args.choose_label))
 
 # 打印模型结构 输出图片
-show_model_structure(model, 'model.png')
+# show_model_structure(model, 'model.png')
 
 # 用当天数据，加载昨天的模型进行测试，测试昨天的模型效果咋样
 if args.if_test:

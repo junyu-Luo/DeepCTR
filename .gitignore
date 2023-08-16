@@ -16,5 +16,8 @@ __pycache__/
 metastore_db/
 .idea/
 
+# vs文件
+.vs/
+
 # .gitignore 保留
 !.gitignore

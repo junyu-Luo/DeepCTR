@@ -25,7 +25,7 @@ from ...layers.interaction import FM
 from ...layers.core import PredictionLayer, DNN
 from ...layers.utils import combined_dnn_input, reduce_sum
 from ...feature_column import SparseFeat, DenseFeat, VarLenSparseFeat
-from ...layers.featconv import ArithmeticLayer, VocabLayer, AutoDis
+from ...layers.convlayer import ArithmeticLayer, VocabLayer, AutoDis
 
 
 # # Util function

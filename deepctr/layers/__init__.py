@@ -12,7 +12,7 @@ from .sequence import (AttentionSequencePoolingLayer, BiasEncoding, BiLSTM,
                        Transformer, DynamicGRU,PositionEncoding)
 
 from .utils import NoMask, Hash, Linear, Add, combined_dnn_input, softmax, reduce_sum
-from .featconv import VocabLayer,ArithmeticLayer,AutoDis,StrSeqPadLayer,IntSeqPadLayer
+from .convlayer import VocabLayer,ArithmeticLayer,AutoDis,StrSeqPadLayer,IntSeqPadLayer
 
 custom_objects = {'tf': tf,
                   'InnerProductLayer': InnerProductLayer,

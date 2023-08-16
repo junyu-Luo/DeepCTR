@@ -4,12 +4,11 @@ import time
 import os
 import tensorflow as tf
 from sklearn.metrics import roc_auc_score
-from utils import get_date, date_range
 
-from deepctr.utils import read_json, save_json, dir_file_name, list_split_2
-from deepctr.data_pipeline import TFrecordBuilder
-from deepctr.metrics import parallel_cal_group_auc
-from deepctr.warm_up import tfserving_warmup
+from .utils import get_date, date_range, read_json, save_json, dir_file_name, list_split_2
+from .data_pipeline import TFrecordBuilder
+from .metrics import parallel_cal_group_auc
+from .warm_up import tfserving_warmup
 
 
 def push_mvp(args):

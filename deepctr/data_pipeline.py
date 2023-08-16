@@ -1,5 +1,5 @@
-from utils import read_json, dir_file_name, flatList
-from deepctr.feature_column import DenseFeat, SparseFeat, VarLenSparseFeat, EmbFeat
+from .utils import read_json, dir_file_name, flatList
+from .feature_column import DenseFeat, SparseFeat, VarLenSparseFeat, EmbFeat
 import time
 import tensorflow as tf
 import os
