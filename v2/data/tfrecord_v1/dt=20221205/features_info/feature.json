@@ -1,0 +1,842 @@
+{
+  "schema": {
+    "e_app_id": {
+      "type": "String",
+      "default": "",
+      "source": {
+        "key_type": "ctx",
+        "pid": 0,
+        "field": "e_app_id"
+      }
+    },
+    "u_gender": {
+      "type": "Int",
+      "default": -1,
+      "source": {
+        "key_type": "user_id",
+        "pid": 10001,
+        "field": "sex"
+      }
+    },
+    "i_p_gender": {
+      "type": "Int",
+      "default": -1,
+      "source": {
+        "key_type": "item_owner_id",
+        "pid": 10001,
+        "field": "sex"
+      }
+    },
+    "u_age": {
+      "type": "Float32",
+      "default": 0,
+      "source": {
+        "key_type": "user_id",
+        "pid": 10001,
+        "field": "age"
+      }
+    },
+    "i_p_age": {
+      "type": "Float32",
+      "default": 0,
+      "source": {
+        "key_type": "item_owner_id",
+        "pid": 10001,
+        "field": "age"
+      }
+    },
+    "u_province": {
+      "type": "String",
+      "default": "",
+      "source": {
+        "key_type": "user_id",
+        "pid": 110100200,
+        "field": "province"
+      }
+    },
+    "i_p_province": {
+      "type": "String",
+      "default": "",
+      "source": {
+        "key_type": "item_owner_id",
+        "pid": 110100200,
+        "field": "province"
+      }
+    },
+    "u_city": {
+      "type": "String",
+      "default": "",
+      "source": {
+        "key_type": "user_id",
+        "pid": 110100200,
+        "field": "city"
+      }
+    },
+    "i_p_city": {
+      "type": "String",
+      "default": "",
+      "source": {
+        "key_type": "item_owner_id",
+        "pid": 110100200,
+        "field": "city"
+      }
+    },
+    "u_card_tag_ids": {
+      "type": "String",
+      "default": "",
+      "source": {
+        "key_type": "user_id",
+        "pid": 10001,
+        "field": "tag_4"
+      }
+    },
+    "i_expo_tag_id": {
+      "type": "Int",
+      "default": -1,
+      "source": {
+        "key_type": "ctx",
+        "pid": 0,
+        "field": "i_expo_tag_id"
+      }
+    },
+    "i_expo_region_name": {
+      "type": "String",
+      "default": "",
+      "source": {
+        "key_type": "ctx",
+        "pid": 0,
+        "field": "i_expo_region_name"
+      }
+    },
+    "i_expo_song_name": {
+      "type": "String",
+      "default": "",
+      "source": {
+        "key_type": "ctx",
+        "pid": 0,
+        "field": "i_expo_song_name"
+      }
+    },
+    "u_expo_song_seq": {
+      "type": "String",
+      "default": "",
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400500,
+        "field": "u_expo_song_seq"
+      }
+    },
+    "ui_room_music_ctr_3d": {
+      "type": "Float32",
+      "default": 0,
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400300,
+        "field": "ui_room_music_ctr_3d"
+      }
+    },
+    "ui_room_music_expo_cnt_3d": {
+      "type": "Float32",
+      "default": 0,
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400300,
+        "field": "ui_room_music_expo_cnt_3d"
+      }
+    },
+    "ui_room_music_enter_cnt_1w": {
+      "type": "Float32",
+      "default": 0,
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400300,
+        "field": "ui_room_music_enter_cnt_1w"
+      }
+    },
+    "ui_room_music_enter_cnt_3w": {
+      "type": "Float32",
+      "default": 0,
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400300,
+        "field": "ui_room_music_enter_cnt_3w"
+      }
+    },
+    "i_expo_member_cnt": {
+      "type": "Float32",
+      "default": -1.0,
+      "source": {
+        "key_type": "ctx",
+        "pid": 0,
+        "field": "i_expo_member_cnt"
+      }
+    },
+    "u_enter_memberCnt_dist_1w": {
+      "type": "Float32Vec",
+      "default": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400500,
+        "field": "u_enter_memberCnt_dist_1w"
+      }
+    },
+    "u_enter_memberCnt_dist_195_1w": {
+      "type": "Float32Vec",
+      "default": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400500,
+        "field": "u_enter_memberCnt_dist_195_1w"
+      }
+    },
+    "u_enter_memberCnt_dist_198_1w": {
+      "type": "Float32Vec",
+      "default": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400500,
+        "field": "u_enter_memberCnt_dist_198_1w"
+      }
+    },
+    "u_enter_memberCnt_dist_199_1w": {
+      "type": "Float32Vec",
+      "default": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400500,
+        "field": "u_enter_memberCnt_dist_199_1w"
+      }
+    },
+    "u_enter_memberCnt_dist_200_1w": {
+      "type": "Float32Vec",
+      "default": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400500,
+        "field": "u_enter_memberCnt_dist_200_1w"
+      }
+    },
+    "u_enter_memberCnt_dist_222_1w": {
+      "type": "Float32Vec",
+      "default": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400500,
+        "field": "u_enter_memberCnt_dist_222_1w"
+      }
+    },
+    "u_enter_female_smooth_ratio_1w": {
+      "type": "Float32",
+      "default": 0.5,
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400500,
+        "field": "u_enter_female_smooth_ratio_1w"
+      }
+    },
+    "u_expo_titleTags_seq_3w": {
+      "type": "String",
+      "default": "",
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400500,
+        "field": "u_expo_titleTags_seq_3w"
+      }
+    },
+    "ui_room_music_tab_enter_cnt_1w": {
+      "type": "MapIntFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400300,
+        "field": "ui_room_music_tab_enter_cnt_1w"
+      }
+    },
+    "ui_room_music_tab_enter_cnt_3w": {
+      "type": "MapIntFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400300,
+        "field": "ui_room_music_tab_enter_cnt_3w"
+      }
+    },
+    "ui_room_music_tab_duration_1w": {
+      "type": "MapIntFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400300,
+        "field": "ui_room_music_tab_duration_1w"
+      }
+    },
+    "ui_room_music_tab_duration_3w": {
+      "type": "MapIntFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400300,
+        "field": "ui_room_music_tab_duration_3w"
+      }
+    },
+    "ui_room_music_tab_kaihei_cnt_1w": {
+      "type": "MapIntFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400300,
+        "field": "ui_room_music_tab_kaihei_cnt_1w"
+      }
+    },
+    "ui_room_music_tab_kaihei_cnt_3w": {
+      "type": "MapIntFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400300,
+        "field": "ui_room_music_tab_kaihei_cnt_3w"
+      }
+    },
+    "ui_sectab_enter_count_1w": {
+      "type": "MapStringFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400400,
+        "field": "ui_sectab_enter_count_1w"
+      }
+    },
+    "ui_sectab_enter_count_3w": {
+      "type": "MapStringFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400400,
+        "field": "ui_sectab_enter_count_3w"
+      }
+    },
+    "ui_sectab_enter_duration_1w": {
+      "type": "MapStringFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400400,
+        "field": "ui_sectab_enter_duration_1w"
+      }
+    },
+    "ui_sectab_enter_duration_3w": {
+      "type": "MapStringFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400400,
+        "field": "ui_sectab_enter_duration_3w"
+      }
+    },
+    "ui_sectab_exposure_count_1w": {
+      "type": "MapStringFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400400,
+        "field": "ui_sectab_exposure_count_1w"
+      }
+    },
+    "ui_sectab_exposure_count_3w": {
+      "type": "MapStringFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400400,
+        "field": "ui_sectab_exposure_count_3w"
+      }
+    },
+    "ui_quick_enter_count_3w": {
+      "type": "MapStringFloat32",
+      "default": {},
+      "source": {
+        "key_type": "user_id",
+        "pid": 110400400,
+        "field": "ui_quick_enter_count_3w"
+      }
+    },
+    "i_expo_titleTags": {
+      "type": "StringVec",
+      "default": [],
+      "source": {
+        "key_type": "item_id",
+        "pid": 110200600,
+        "field": "keyword"
+      }
+    }
+  },
+  "features": [
+    {
+      "expr": "e_app_id",
+      "out": "e_app_id"
+    },
+    {
+      "expr": "u_gender",
+      "out": "u_gender"
+    },
+    {
+      "expr": "i_p_gender",
+      "out": "i_p_gender"
+    },
+    {
+      "expr": "u_age",
+      "out": "u_age"
+    },
+    {
+      "expr": "i_p_age",
+      "out": "i_p_age"
+    },
+    {
+      "expr": "u_province",
+      "out": "u_province"
+    },
+    {
+      "expr": "i_p_province",
+      "out": "i_p_province"
+    },
+    {
+      "expr": "u_city",
+      "out": "u_city"
+    },
+    {
+      "expr": "i_p_city",
+      "out": "i_p_city"
+    },
+    {
+      "expr": "u_card_tag_ids",
+      "out": "u_card_tag_ids"
+    },
+    {
+      "expr": "i_expo_tag_id",
+      "out": "i_expo_tag_id"
+    },
+    {
+      "expr": "i_expo_region_name",
+      "out": "i_expo_region_name"
+    },
+    {
+      "expr": "i_expo_song_name",
+      "out": "i_expo_song_name"
+    },
+    {
+      "expr": "u_expo_song_seq",
+      "out": "u_expo_song_seq"
+    },
+    {
+      "expr": "ui_room_music_ctr_3d",
+      "out": "ui_room_music_ctr_3d"
+    },
+    {
+      "expr": "ui_room_music_expo_cnt_3d",
+      "out": "ui_room_music_expo_cnt_3d"
+    },
+    {
+      "expr": "ui_room_music_enter_cnt_1w",
+      "out": "ui_room_music_enter_cnt_1w"
+    },
+    {
+      "expr": "ui_room_music_enter_cnt_3w",
+      "out": "ui_room_music_enter_cnt_3w"
+    },
+    {
+      "expr": "i_expo_member_cnt",
+      "out": "i_expo_member_cnt"
+    },
+    {
+      "expr": "u_enter_memberCnt_dist_1w",
+      "out": "u_enter_memberCnt_dist_1w"
+    },
+    {
+      "expr": "u_enter_memberCnt_dist_195_1w",
+      "out": "u_enter_memberCnt_dist_195_1w"
+    },
+    {
+      "expr": "u_enter_memberCnt_dist_198_1w",
+      "out": "u_enter_memberCnt_dist_198_1w"
+    },
+    {
+      "expr": "u_enter_memberCnt_dist_199_1w",
+      "out": "u_enter_memberCnt_dist_199_1w"
+    },
+    {
+      "expr": "u_enter_memberCnt_dist_200_1w",
+      "out": "u_enter_memberCnt_dist_200_1w"
+    },
+    {
+      "expr": "u_enter_memberCnt_dist_222_1w",
+      "out": "u_enter_memberCnt_dist_222_1w"
+    },
+    {
+      "expr": "u_enter_female_smooth_ratio_1w",
+      "out": "u_enter_female_smooth_ratio_1w"
+    },
+    {
+      "expr": "u_expo_titleTags_seq_3w",
+      "out": "u_expo_titleTags_seq_3w"
+    },
+    {
+      "expr": "get_now_hour_batch()",
+      "out": "e_hour"
+    },
+    {
+      "expr": "get_map_values(ui_room_music_tab_enter_cnt_1w, fsttab_vocab)",
+      "out": "ui_room_music_tab_enter_cnt_1w",
+      "consts": {
+        "fsttab_vocab": {
+          "value": [
+            195,
+            198,
+            199,
+            200,
+            222
+          ],
+          "type": "IntVec"
+        }
+      }
+    },
+    {
+      "expr": "get_map_values(ui_room_music_tab_enter_cnt_3w, fsttab_vocab)",
+      "out": "ui_room_music_tab_enter_cnt_3w",
+      "consts": {
+        "fsttab_vocab": {
+          "value": [
+            195,
+            198,
+            199,
+            200,
+            222
+          ],
+          "type": "IntVec"
+        }
+      }
+    },
+    {
+      "expr": "get_map_values(ui_room_music_tab_duration_1w, fsttab_vocab)",
+      "out": "ui_room_music_tab_duration_1w",
+      "consts": {
+        "fsttab_vocab": {
+          "value": [
+            195,
+            198,
+            199,
+            200,
+            222
+          ],
+          "type": "IntVec"
+        }
+      }
+    },
+    {
+      "expr": "get_map_values(ui_room_music_tab_duration_3w, fsttab_vocab)",
+      "out": "ui_room_music_tab_duration_3w",
+      "consts": {
+        "fsttab_vocab": {
+          "value": [
+            195,
+            198,
+            199,
+            200,
+            222
+          ],
+          "type": "IntVec"
+        }
+      }
+    },
+    {
+      "expr": "get_map_values(ui_room_music_tab_kaihei_cnt_1w, fsttab_vocab)",
+      "out": "ui_room_music_tab_kaihei_cnt_1w",
+      "consts": {
+        "fsttab_vocab": {
+          "value": [
+            195,
+            198,
+            199,
+            200,
+            222
+          ],
+          "type": "IntVec"
+        }
+      }
+    },
+    {
+      "expr": "get_map_values(ui_room_music_tab_kaihei_cnt_3w, fsttab_vocab)",
+      "out": "ui_room_music_tab_kaihei_cnt_3w",
+      "consts": {
+        "fsttab_vocab": {
+          "value": [
+            195,
+            198,
+            199,
+            200,
+            222
+          ],
+          "type": "IntVec"
+        }
+      }
+    },
+    {
+      "expr": "get_map_values(ui_sectab_enter_count_1w, sectab_vocab)",
+      "out": "ui_sectab_enter_count_1w",
+      "consts": {
+        "sectab_vocab": {
+          "value": [
+            "195;一起K歌;一起练歌",
+            "195;一起K歌;毁歌时刻",
+            "195;一起K歌;欢乐合唱",
+            "195;一起K歌;质量独唱",
+            "195;一起K歌;古风专场",
+            "222;你行你唱;真走音专区",
+            "222;你行你唱;歌神专区",
+            "222;你行你唱;闯关专区",
+            "222;你行你唱;抖音专区",
+            "222;你行你唱;古风专区",
+            "222;你行你唱;元气专区",
+            "222;你行你唱;周杰伦专区",
+            "222;你行你唱;粤语专区",
+            "222;你行你唱;ACG专区",
+            "199;挂房听歌;一起自习",
+            "199;挂房听歌;一起摸鱼",
+            "199;挂房听歌;燥",
+            "198;就是说唱;Freestyle",
+            "198;就是说唱;Pop",
+            "198;就是说唱;8厘米练嘴",
+            "198;就是说唱;Trap",
+            "200;边唱边聊;"
+          ],
+          "type": "StringVec"
+        }
+      }
+    },
+    {
+      "expr": "get_map_values(ui_sectab_enter_count_3w, sectab_vocab)",
+      "out": "ui_sectab_enter_count_3w",
+      "consts": {
+        "sectab_vocab": {
+          "value": [
+            "195;一起K歌;一起练歌",
+            "195;一起K歌;毁歌时刻",
+            "195;一起K歌;欢乐合唱",
+            "195;一起K歌;质量独唱",
+            "195;一起K歌;古风专场",
+            "222;你行你唱;真走音专区",
+            "222;你行你唱;歌神专区",
+            "222;你行你唱;闯关专区",
+            "222;你行你唱;抖音专区",
+            "222;你行你唱;古风专区",
+            "222;你行你唱;元气专区",
+            "222;你行你唱;周杰伦专区",
+            "222;你行你唱;粤语专区",
+            "222;你行你唱;ACG专区",
+            "199;挂房听歌;一起自习",
+            "199;挂房听歌;一起摸鱼",
+            "199;挂房听歌;燥",
+            "198;就是说唱;Freestyle",
+            "198;就是说唱;Pop",
+            "198;就是说唱;8厘米练嘴",
+            "198;就是说唱;Trap",
+            "200;边唱边聊;"
+          ],
+          "type": "StringVec"
+        }
+      }
+    },
+    {
+      "expr": "get_map_values(ui_sectab_enter_duration_1w, sectab_vocab)",
+      "out": "ui_sectab_enter_duration_1w",
+      "consts": {
+        "sectab_vocab": {
+          "value": [
+            "195;一起K歌;一起练歌",
+            "195;一起K歌;毁歌时刻",
+            "195;一起K歌;欢乐合唱",
+            "195;一起K歌;质量独唱",
+            "195;一起K歌;古风专场",
+            "222;你行你唱;真走音专区",
+            "222;你行你唱;歌神专区",
+            "222;你行你唱;闯关专区",
+            "222;你行你唱;抖音专区",
+            "222;你行你唱;古风专区",
+            "222;你行你唱;元气专区",
+            "222;你行你唱;周杰伦专区",
+            "222;你行你唱;粤语专区",
+            "222;你行你唱;ACG专区",
+            "199;挂房听歌;一起自习",
+            "199;挂房听歌;一起摸鱼",
+            "199;挂房听歌;燥",
+            "198;就是说唱;Freestyle",
+            "198;就是说唱;Pop",
+            "198;就是说唱;8厘米练嘴",
+            "198;就是说唱;Trap",
+            "200;边唱边聊;"
+          ],
+          "type": "StringVec"
+        }
+      }
+    },
+    {
+      "expr": "get_map_values(ui_sectab_enter_duration_3w, sectab_vocab)",
+      "out": "ui_sectab_enter_duration_3w",
+      "consts": {
+        "sectab_vocab": {
+          "value": [
+            "195;一起K歌;一起练歌",
+            "195;一起K歌;毁歌时刻",
+            "195;一起K歌;欢乐合唱",
+            "195;一起K歌;质量独唱",
+            "195;一起K歌;古风专场",
+            "222;你行你唱;真走音专区",
+            "222;你行你唱;歌神专区",
+            "222;你行你唱;闯关专区",
+            "222;你行你唱;抖音专区",
+            "222;你行你唱;古风专区",
+            "222;你行你唱;元气专区",
+            "222;你行你唱;周杰伦专区",
+            "222;你行你唱;粤语专区",
+            "222;你行你唱;ACG专区",
+            "199;挂房听歌;一起自习",
+            "199;挂房听歌;一起摸鱼",
+            "199;挂房听歌;燥",
+            "198;就是说唱;Freestyle",
+            "198;就是说唱;Pop",
+            "198;就是说唱;8厘米练嘴",
+            "198;就是说唱;Trap",
+            "200;边唱边聊;"
+          ],
+          "type": "StringVec"
+        }
+      }
+    },
+    {
+      "expr": "get_map_values(ui_sectab_exposure_count_1w, sectab_vocab)",
+      "out": "ui_sectab_exposure_count_1w",
+      "consts": {
+        "sectab_vocab": {
+          "value": [
+            "195;一起K歌;一起练歌",
+            "195;一起K歌;毁歌时刻",
+            "195;一起K歌;欢乐合唱",
+            "195;一起K歌;质量独唱",
+            "195;一起K歌;古风专场",
+            "222;你行你唱;真走音专区",
+            "222;你行你唱;歌神专区",
+            "222;你行你唱;闯关专区",
+            "222;你行你唱;抖音专区",
+            "222;你行你唱;古风专区",
+            "222;你行你唱;元气专区",
+            "222;你行你唱;周杰伦专区",
+            "222;你行你唱;粤语专区",
+            "222;你行你唱;ACG专区",
+            "199;挂房听歌;一起自习",
+            "199;挂房听歌;一起摸鱼",
+            "199;挂房听歌;燥",
+            "198;就是说唱;Freestyle",
+            "198;就是说唱;Pop",
+            "198;就是说唱;8厘米练嘴",
+            "198;就是说唱;Trap",
+            "200;边唱边聊;"
+          ],
+          "type": "StringVec"
+        }
+      }
+    },
+    {
+      "expr": "get_map_values(ui_sectab_exposure_count_3w, sectab_vocab)",
+      "out": "ui_sectab_exposure_count_3w",
+      "consts": {
+        "sectab_vocab": {
+          "value": [
+            "195;一起K歌;一起练歌",
+            "195;一起K歌;毁歌时刻",
+            "195;一起K歌;欢乐合唱",
+            "195;一起K歌;质量独唱",
+            "195;一起K歌;古风专场",
+            "222;你行你唱;真走音专区",
+            "222;你行你唱;歌神专区",
+            "222;你行你唱;闯关专区",
+            "222;你行你唱;抖音专区",
+            "222;你行你唱;古风专区",
+            "222;你行你唱;元气专区",
+            "222;你行你唱;周杰伦专区",
+            "222;你行你唱;粤语专区",
+            "222;你行你唱;ACG专区",
+            "199;挂房听歌;一起自习",
+            "199;挂房听歌;一起摸鱼",
+            "199;挂房听歌;燥",
+            "198;就是说唱;Freestyle",
+            "198;就是说唱;Pop",
+            "198;就是说唱;8厘米练嘴",
+            "198;就是说唱;Trap",
+            "200;边唱边聊;"
+          ],
+          "type": "StringVec"
+        }
+      }
+    },
+    {
+      "expr": "get_map_values(ui_quick_enter_count_3w, quick_vocab)",
+      "out": "ui_quick_enter_count_3w",
+      "consts": {
+        "quick_vocab": {
+          "value": [
+            "195;一起K歌;",
+            "198;就是说唱;",
+            "199;挂房听歌;",
+            "222;你行你唱;"
+          ],
+          "type": "StringVec"
+        }
+      }
+    },
+    {
+      "expr": "concat_ws(i_expo_titleTags, sep)",
+      "out": "i_expo_titleTags",
+      "consts": {
+        "sep": {
+          "value": ",",
+          "type": "String"
+        }
+      }
+    }
+  ]
+}
